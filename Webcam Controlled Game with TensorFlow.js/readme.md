@@ -11,6 +11,8 @@ Codedex-Community-Projects/
 │   ├── style.css        # Complete styling (provided)
 │   ├── game.js          # Game boilerplate with TODOs
 │   └── handTracking.js  # Hand tracking boilerplate with TODOs
+└── README.md            # This file
+```
 
 ## How to Play
 
