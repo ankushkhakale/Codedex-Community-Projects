@@ -231,8 +231,36 @@ async function startGame() {
 
   initBalls();
 
-  // TODO: Step 7 - Integrate Hand Tracking with Game
-  // Initialize hand tracking if not already done:
+// Initialize hand tracking if not already done
+if (!window.handTrackingInitialized) {
+  // Show loading overlay
+  loadingOverlay.classList.remove("hidden");
+  loadingStatus.textContent = "Requesting camera access...";
+
+  const webcam = document.getElementById("webcam");
+
+  // Update loading status
+  loadingStatus.textContent = "Loading MediaPipe Hands model...";
+
+  const success = await window.handTracking.setupHandTracking(
+    webcam,
+    function receiveHands(hands) {
+      gameState.hands = hands; // Update game state with detected hands
+    },
+  );
+
+  // Hide loading overlay
+  loadingOverlay.classList.add("hidden");
+
+  if (!success) {
+    endGame();
+    overlayMessage.textContent = "Camera access required to play!";
+    return;
+  }
+
+  window.handTracking.startDetection();
+  window.handTrackingInitialized = true;
+}
 
   overlay.classList.add("hidden");
   gameLoop();
@@ -267,13 +295,6 @@ function endGame() {
 // Event listeners
 startButton.addEventListener("click", startGame);
 
-// TODO: Step 2 - Implement Loading Progress Indicator
-// Create a function checkTensorFlowLoaded():
-
-// Start checking once DOM is loaded:
-
-
-// Initial render
 // Check if TensorFlow.js is loaded
 function checkTensorFlowLoaded() {
   if (typeof tf !== "undefined" && typeof handPoseDetection !== "undefined") {
