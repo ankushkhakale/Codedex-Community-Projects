@@ -46,7 +46,7 @@ def main():
   ball_rect = pygame.Rect(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, 25, 25)
 
   # determine the x and y speed of the ball 
-  ball_accel_x = random.randint(2, 4) * 0.1
+  ball_accel_x = random.randint(2, 4) * 0
   ball_accel_y = random.randint(2, 4) * 0.1
 
   # randomize the direction of the ball
