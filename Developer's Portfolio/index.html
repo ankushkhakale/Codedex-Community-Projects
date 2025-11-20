@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio</title>
+    <meta name="description" content="A modern, aesthetic developer portfolio showcasing projects and skills.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <nav class="navbar">
+        <div class="logo">dev.</div>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#work" class="nav-link">Work</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Building digital <br>
+                    <span class="highlight-text">experiences</span> that matter.
+                </h1>
+                <p class="hero-subtitle">
+                    I'm a <span class="typing-text"></span> based in the cloud.
+                </p>
+                <div class="hero-cta">
+                    <a href="#work" class="btn btn-primary">View Work</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <!-- Abstract geometric shape or 3D element here -->
+                <div class="glowing-orb"></div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll</span>
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section about-section">
+            <div class="container">
+                <h2 class="section-title" data-reveal>About Me</h2>
+                <div class="about-grid">
+                    <div class="about-text" data-reveal>
+                        <p>I am a passionate developer with a knack for creating elegant solutions to complex problems. My journey in tech is driven by curiosity and a desire to build things that make a difference.</p>
+                        <p>I specialize in building modern web applications with a focus on performance, accessibility, and user experience.</p>
+                        
+                        <div class="skills-wrapper">
+                            <h3>Tech Stack</h3>
+                            <div class="skills-list">
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">React</span>
+                                <span class="skill-tag">Node.js</span>
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">CSS3</span>
+                                <span class="skill-tag">WebGL</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image" data-reveal>
+                        <div class="image-frame">
+                            <!-- Placeholder for profile image -->
+                            <div class="placeholder-img"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="work" class="section work-section">
+            <div class="container">
+                <h2 class="section-title" data-reveal>Selected Work</h2>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <article class="project-card" data-reveal>
+                        <div class="project-image">
+                            <div class="project-overlay"></div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">E-Commerce Platform</h3>
+                            <p class="project-desc">A full-featured shopping experience with real-time inventory and secure payments.</p>
+                            <div class="project-tags">
+                                <span>Next.js</span>
+                                <span>Stripe</span>
+                            </div>
+                            <a href="#" class="project-link">View Project <span class="arrow">→</span></a>
+                        </div>
+                    </article>
+                    
+                    <!-- Project 2 -->
+                    <article class="project-card" data-reveal>
+                        <div class="project-image">
+                            <div class="project-overlay"></div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Task Management App</h3>
+                            <p class="project-desc">Productivity tool designed for remote teams with live collaboration features.</p>
+                            <div class="project-tags">
+                                <span>React</span>
+                                <span>Firebase</span>
+                            </div>
+                            <a href="#" class="project-link">View Project <span class="arrow">→</span></a>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="project-card" data-reveal>
+                        <div class="project-image">
+                            <div class="project-overlay"></div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">AI Dashboard</h3>
+                            <p class="project-desc">Analytics dashboard visualizing complex data sets with AI-driven insights.</p>
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>D3.js</span>
+                            </div>
+                            <a href="#" class="project-link">View Project <span class="arrow">→</span></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="contact-wrapper" data-reveal>
+                    <h2 class="section-title">Let's Connect</h2>
+                    <p class="contact-text">Have a project in mind or just want to say hi? My inbox is always open.</p>
+                    <a href="mailto:hello@example.com" class="email-link">hello@example.com</a>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-icon">GH</a>
+                        <a href="#" class="social-icon">LI</a>
+                        <a href="#" class="social-icon">TW</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Developer Portfolio. Crafted with code.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
