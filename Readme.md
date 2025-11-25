@@ -12,7 +12,7 @@ This repository collects small learning projects I built as part of the Codedex 
 
 **Quick start**
 - Browse project folders and open their `readme.md` or main file.
-- Example (Pong):
+- Example:
 	- `cd "Pong Game"`
 	- `python game.py`  (requires `pygame`)
 - Example (Tic‑Tac‑Toe):
