@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to speech app</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="" header>
+        <h1>🎧 Web Speech API - Text To Speech App</h1>
+    </header>
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Instructions -->
+        <div class="card instructions">
+            <h3>How to use:</h3>
+            <ol>
+                <li>Type or paste your text below</li>
+                <li>Select a voice from the dropdown</li>
+                <li>Adjust the speed and pitch if desired</li>
+                <li>Click "Speak" to hear it!</li>
+            </ol>
+        </div>
+        <div class="card">
+            <label for="text-input">
+                <strong>Your Text</strong>
+                <span class="char-counter">
+                    <span id="char-count">0</span>characters
+                </span>
+            </label>
+            <textarea id="text-input" placeholder="Enter text to convert to speech..." rows="8"></textarea>
+        </div>
+        <div class="card">
+            <label for="voice-select">
+                <strong>Voice</strong>
+            </label>
+            <select id="voice-select">
+                <option value="">Loading voices...</option>
+            </select>
+        </div>
+    </div>
+    </div>
+    </header>
+</body>
+
+</html>
