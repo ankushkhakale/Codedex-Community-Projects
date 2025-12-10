@@ -1,4 +1,4 @@
-# Codedex Community Projects
+## Codedex Community Projects
 
 This repository collects small learning projects I built as part of the Codedex community. Each project was created to practice new skills, try out libraries, and explore ideas in a hands-on way.
 
@@ -8,10 +8,10 @@ This repository collects small learning projects I built as part of the Codedex 
 
 **How I learned**
 - I picked a feature or library to learn (for example, `pygame` or Node CLI input), read docs and tutorials, then built a small project to apply the concepts.
-- Iteration: prototype → test → refactor. Each project shows what I practiced and what I learned.
+- Iteration: Prototype → Test → Refactor. Each project shows what I practiced and what I learned.
 
 **Quick start**
-- Browse project folders and open their `readme.md` or main file.
+- Browse project folders and open their main file.
 - Example:
 	- `cd "Pong Game"`
 	- `python game.py`  (requires `pygame`)
