@@ -1,7 +1,8 @@
 :root {
     --bg-color: #0a0a0a;
     --text-color: #e0e0e0;
-    --accent-color: #64ffda; /* Electric Teal */
+    --accent-color: #64ffda;
+    /* Electric Teal */
     --secondary-color: #8892b0;
     --card-bg: #112240;
     --font-main: 'Outfit', sans-serif;
@@ -13,7 +14,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: none; /* Custom cursor */
+    cursor: none;
+    /* Custom cursor */
 }
 
 html {
@@ -163,7 +165,7 @@ body:hover .cursor-outline {
 .glowing-orb {
     width: 300px;
     height: 300px;
-    background: radial-gradient(circle, rgba(100,255,218,0.4) 0%, rgba(10,10,10,0) 70%);
+    background: radial-gradient(circle, rgba(100, 255, 218, 0.4) 0%, rgba(10, 10, 10, 0) 70%);
     border-radius: 50%;
     filter: blur(40px);
     animation: float 6s ease-in-out infinite;
@@ -174,9 +176,17 @@ body:hover .cursor-outline {
 }
 
 @keyframes float {
-    0% { transform: translateY(0px) scale(1); }
-    50% { transform: translateY(-20px) scale(1.1); }
-    100% { transform: translateY(0px) scale(1); }
+    0% {
+        transform: translateY(0px) scale(1);
+    }
+
+    50% {
+        transform: translateY(-20px) scale(1.1);
+    }
+
+    100% {
+        transform: translateY(0px) scale(1);
+    }
 }
 
 /* Scroll Indicator */
@@ -215,8 +225,15 @@ body:hover .cursor-outline {
 }
 
 @keyframes scroll {
-    0% { opacity: 1; top: 6px; }
-    100% { opacity: 0; top: 20px; }
+    0% {
+        opacity: 1;
+        top: 6px;
+    }
+
+    100% {
+        opacity: 0;
+        top: 20px;
+    }
 }
 
 /* Sections General */
@@ -321,16 +338,18 @@ body:hover .cursor-outline {
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 4rem 2rem; /* Larger vertical gap */
+    gap: 4rem 2rem;
+    /* Larger vertical gap */
 }
 
 .project-card {
-    background: transparent; /* Remove card background */
+    background: transparent;
+    /* Remove card background */
     border-radius: 0;
     overflow: visible;
     transition: var(--transition);
     position: relative;
-    group: project;
+
 }
 
 .project-card:hover {
@@ -510,19 +529,75 @@ body:hover .cursor-outline {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .navbar {
+        padding: 1rem 5%;
+        /* Reduce padding on mobile */
+    }
+
     .hero-title {
         font-size: 2.5rem;
     }
-    
+
     .about-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .section {
         padding: 80px 5%;
     }
-    
+
     .nav-links {
-        display: none; /* Mobile menu to be implemented if needed */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(10, 10, 10, 0.95);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+        gap: 1.5rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        transform: translateY(-150%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 99;
     }
+
+    .nav-links.active {
+        transform: translateY(0);
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        z-index: 101;
+        /* Ensure on top */
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+/* Hamburger Styles (Base) */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--text-color);
+    transition: all 0.3s ease-in-out;
 }

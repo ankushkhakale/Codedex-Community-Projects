@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function type() {
         const currentWord = words[wordIndex];
-        
+
         if (isDeleting) {
             textElement.textContent = currentWord.substring(0, charIndex - 1);
             charIndex--;
@@ -61,13 +61,13 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(type, isDeleting ? 100 : 200);
         }
     }
-    
+
     // Start typing effect
     type();
 
     // Scroll Reveal
     const revealElements = document.querySelectorAll('[data-reveal]');
-    
+
     const revealOnScroll = () => {
         const windowHeight = window.innerHeight;
         const elementVisible = 150;
@@ -83,4 +83,25 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', revealOnScroll);
     // Trigger once on load
     revealOnScroll();
+    // Mobile Menu Toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    const navLinksItems = document.querySelectorAll('.nav-link');
+
+    if (hamburger) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+    }
+
+    // Close mobile menu when clicking a link
+    navLinksItems.forEach(item => {
+        item.addEventListener('click', () => {
+            if (hamburger && hamburger.classList.contains('active')) {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+    });
 });
