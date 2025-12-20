@@ -6,7 +6,7 @@ This repository collects small learning projects I built as part of the Codedex 
 - **Purpose:** A playground for learning — try new tools, build small games, and experiment.
 - **Contents:** A set of separate project folders (games, scripts, demos). Each folder contains its own README or instructions where needed.
 
-**How I learned**
+**How I taught**
 - I picked a feature or library to learn (for example, `pygame` or Node CLI input), read docs and tutorials, then built a small project to apply the concepts.
 - Iteration: Prototype → Test → Refactor. Each project shows what I practiced and what I learned.
 
