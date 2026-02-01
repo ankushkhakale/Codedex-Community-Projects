@@ -6,7 +6,7 @@ function Player.new(x, y)
     self.x = x
     self.y = y
     self.speed = 120
-    self.size = 20
+    self.size = 30
     self.sprite = love.graphics.newImage("Hungry-dino 2.png")
     -- Scale sprite to roughly match the existing collision size
     local maxDim = math.max(self.sprite:getWidth(), self.sprite:getHeight())
