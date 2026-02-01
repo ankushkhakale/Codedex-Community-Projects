@@ -19,6 +19,14 @@ This repository collects small learning projects I built as part of the Codedex 
 	- `cd "ticktacktoe game"`
 	- `npm install prompt-sync`
 	- `node tictactoe.js`
+- For RPG game:
+To launch the game, use the following command in PowerShell:
+
+```powershell
+& "C:\Program Files\LÖVE\love.exe" "c:\Users\khaka\Documents\Codedex Community Projects\Codedex-Community-Projects\RPG Game"
+```
+
+**Note**: The `&` symbol is required in PowerShell to execute commands with spaces in the path. The game window will appear showing your tile-based RPG world with the dinosaur character ready to explore!
 
 **Contributing / Notes**
 - This is primarily a personal learning repo, but contributions or suggestions are welcome — open an issue or send a PR.

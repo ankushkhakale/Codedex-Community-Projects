@@ -138,20 +138,5 @@ This project demonstrates fundamental game development concepts:
 - ✓ Tilemap-based level design
 - ✓ Delta-time independent movement
 
-## Future Enhancements
-
-Potential features to expand this project:
-- [ ] NPCs with AI behavior
-- [ ] Interactive objects and items
-- [ ] Animated sprites
-- [ ] Camera system to follow the player
-- [ ] Multiple levels/maps
-- [ ] Combat system
-- [ ] Dialogue/interaction system
-- [ ] Sound effects and music
-
 ## Credits
-
-- **Framework**: LÖVE 2D (love2d.org)
-- **Language**: Lua
-- **Sprites**: Pixel art assets (Custom/External sources)
+Ellie.P from Codedex Community
